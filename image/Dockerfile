@@ -19,6 +19,8 @@ ENV FUSE_VERSION 6.3.0.redhat-077
 # Install fuse in the image.
 COPY install.sh /opt/jboss/install.sh
 
+#Set Persmission
+RUN chmod +x /opt/jboss/install.sh
 #COPY jboss-fuse-full-6.2.1.redhat-090.zip /opt/jboss/jboss-fuse-full-6.2.1.redhat-090.zip
 RUN /opt/jboss/install.sh
 
