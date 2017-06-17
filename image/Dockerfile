@@ -13,13 +13,13 @@ ENV FUSE_PUBLIC_MQTT_SSL_PORT 8883
 ENV FUSE_PUBLIC_AMQP_SSL_PORT 5671
 ENV FUSE_PUBLIC_STOMP_SSL_PORT 61614
 
-RUN chmod -R 700 /bin/sh
-
 # Set the FUSE_VERSION env variable
 ENV FUSE_VERSION 6.3.0.redhat-077
 
 # Install fuse in the image.
 COPY install.sh /opt/jboss/install.sh
+
+RUN chmod 755 /opt/jboss/install.sh
 
 #COPY jboss-fuse-full-6.2.1.redhat-090.zip /opt/jboss/jboss-fuse-full-6.2.1.redhat-090.zip
 RUN /opt/jboss/install.sh
