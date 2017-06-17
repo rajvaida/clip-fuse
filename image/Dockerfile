@@ -16,7 +16,7 @@ ENV FUSE_PUBLIC_STOMP_SSL_PORT 61614
 # Set the FUSE_VERSION env variable
 ENV FUSE_VERSION 6.3.0.redhat-077
 
-su -
+RUN su -
 
 RUN chmod 777 install.sh
 
